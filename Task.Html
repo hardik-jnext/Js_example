@@ -1,0 +1,795 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Task</title>
+    <style>
+        /* #toa {
+            border: 1px solid rgba(32, 28, 28, 0.425);
+        }
+
+        input {
+            padding: 20px;
+            padding-inline: 25px;
+
+
+        }
+
+        #display {
+            height: 55px;
+            padding-top: 5px;
+            padding-bottom: 3px;
+            padding-right: 12px;
+            width: 230px;
+            padding-left: 14px;
+        }
+
+
+
+        table {
+            border-radius: 10px;
+            background-color: rgb(211, 62, 62);
+        } */
+    </style>
+</head>
+
+<body>
+    <p id='demo'></p>
+
+
+    <!-- <input type="button" onclick="Random(4)" value="Random"> -->
+
+    <!--  start sorting (Task no.8) -->
+
+    <!-- <label>Chosse item</label>
+    <select name="select Item" id="select">
+        <option value="id">id</option>
+        <option value="Name">Name</option>
+        <option value="birth">birth</option>
+        <option value="Age">Age</option>
+    </select><br><br>
+    <input type="submit" onclick="submit()" value="Submit">
+    <input type="button" onclick="asscending()" value="asscending">
+    <input type="button" onclick="desending()" value="desending"> -->
+
+    <!--  end sorting -->
+
+
+    <!-- Start search-->
+
+    <!-- <input type="text" id="te1" placeholder="Search">
+    <input type="submit" onclick="myfun()">  -->
+
+    <!-- end search-->
+
+    <!-- start Pagination -->
+
+    <!--<input type="number" placeholder="size" id="siz">
+    <input type="number" placeholder="page" id="page">
+    <span id="toa">Total Pages :- 0</span><br>
+    <input type="submit" onclick="pagi()"> -->
+
+    <!-- end Pagination -->
+
+
+    <!-- start counter -->
+
+    <!-- <input type="text" value=0 id="display" style="margin: 2px;border: 1px solid black;padding: 10px;"></input><br> <br>
+    <input type="text" placeholder="Minimum" id="mini">
+    <input type="text" placeholder="Maximum" id="maxi"><br><br>
+    <input type="button" value="+" style="padding: 10px;" onclick="countPlus()" id="plus">
+    <input type="button" value="-" style="padding: 10px;" onclick="countMinus()"> -->
+
+    <!-- end counter -->
+
+    <!-- start stop watch -->
+
+    <!-- <div style="margin-left: 18px;">
+    <span id="hour" style="margin: 2px;padding: 1px;">00 </span> :
+    <span id="minitue" style="margin: 2px ;padding: 1px;">00 </span> :
+     <span id="second" style="margin: 2px ;padding: 1px;">00</span> <br><br>
+    </div>
+    <input type="button" value="start" style="padding: 10px;" onclick="watchStart()">
+    <input type="button" value="stop" style="padding: 10px;" onclick="watchStop()" id="stop"> -->
+
+    <!-- end stop watch -->
+
+    <!-- start calculator -->
+
+    <!-- <div style="margin-left: 40%; margin-top: 50px;">
+
+
+        <table style="border: 1px solid rgb(0, 0, 0); padding: 8px;">
+            <tr>
+                <td>
+                    <input readonly type="text" value="0" id="display">
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <input type="button" style="padding-inline: 19px;margin-left: 66px;" value="AC"
+                        onclick="clearDisplay(value)">
+                    <input type="button" value="%" style="padding-inline: 23px;" onclick="totalSecond(value)">
+                    <input type="button" value="/" style="padding-inline: 28px;" onclick="Division(value)">
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <input type="button" value="7" onclick="handleNumber(value)" id="seven">
+                    <input type="button" value="8" onclick="handleNumber(value)">
+                    <input type="button" value="9" onclick="handleNumber(value)">
+                    <input type="button" value="*" style="padding-inline: 27px;" onclick="Multiplication(value)">
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <input type="button" value="4" onclick="handleNumber(value)">
+                    <input type="button" value="5" onclick="handleNumber(value)">
+                    <input type="button" value="6" onclick="handleNumber(value)">
+                    <input type="button" value="-" style="padding-inline: 27px;" onclick="Subtraction(value)">
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <input type="button" value="1" onclick="handleNumber(value)">
+                    <input type="button" value="2" onclick="handleNumber(value)">
+                    <input type="button" value="3" onclick="handleNumber(value)">
+                    <input type="button" value="+" onclick="Addition(value)" id="plus">
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <input type="button" value="0" onclick="calculation(value)">
+                    <input type="button" value="00" style="padding-inline: 21px;" onclick="handleNumber(value)">
+                    <input type="button" value="." style="padding-inline: 27px;" onclick="handleNumber(value)">
+                    <input type="button" value="=" onclick="total(value)">
+                </td>
+            </tr>
+        </table>
+
+    </div> -->
+
+    <!-- end calculator -->
+
+
+    <!-- start check valid email id -->
+
+    <!-- <input type="email" placeholder="Enter email" id="email">
+         <input type="submit" value="submit" onclick="validEmail()"> -->
+
+    <!-- start check valid email id -->
+
+    <script>
+
+
+
+        //1. declared string array and sort in ascending order and descending order 
+
+        // const nam = ["Hardik","Dishang","Kausik","Shivang","Mayur","Nikunj"]
+
+        // function  asscending(){
+        //    document.getElementById("demo").innerHTML= nam.sort();
+        // }
+
+        // function decending(){
+        //     document.getElementById('demo').innerHTML = nam.sort().reverse()
+        // }
+
+
+        //2. declared numeric array and sort in ascending order and descending order
+
+
+        // this method is for asscending :-
+
+        // let num = [5,12,2,52,22,100,75]
+        // num.sort(function(a,b){
+        // return a-b;
+        // });
+        // document.getElementById("demo").innerHTML = num;
+
+        // this method is for desending :-
+
+        // let num = [5,12,2,52,22,100,75]
+        // num.sort(function(a,b){
+        // return b-a;
+        // });
+        // document.getElementById("demo").innerHTML = num;
+
+
+        // 3. define numeric array and search given value from it
+
+
+        // const numb = [10,20,30,40,50]
+
+        //  let val = 50;
+
+        //  if( numb.includes(val) == true){
+        //    let detail = numb.findIndex(myfunc)
+
+        // function myfunc(value){
+        //    return  value == val ;
+        // }
+        //      console.log(detail,numb[detail])
+        // }else{
+        //     console.log("not found")
+        //  }
+
+
+        //4. make sum of all value of numeric array
+
+
+        //  const numb = [10,20,30,40,50]
+        // const su = numb.reduce((total,value)=>{return total + value});
+        // console.log(su)
+
+
+
+        //5. merge two arrays and removes all duplicates elements
+
+
+        // const arr = [10,20,30,40,50]
+        // const arr1 = [50,60,70,80,90]
+        // const arr2 = arr.concat(arr1)
+
+        // let a = new Set(arr2);
+        // let b = Array.from(a)
+        // console.log(b)
+
+
+
+        // 6. unique elements from two arrays
+
+
+        // const arr = [10, 20, 30, 40, 50]
+        // const arr1 = [60, 70, 50, 30, 80]
+        // const arr2 = arr.filter((value) => { return arr1.includes(value) })
+        // console.log(arr2)
+
+
+        // 7. find different between two arrays
+
+
+        // const arr = [10,20,30,40,50]
+        // const arr1 =[60,70,50,30,80]
+        // const arr2 = [...arr.filter((value) => { return  !arr1.includes(value) }),...arr1.filter((value) => { return  !arr.includes(value)})]
+
+        // console.log(arr2)
+
+
+
+        //8.declare object array and sort  in ascending order and descending order by specific key using birth date asc desc and name wise
+
+        // let obj = [{ id: 1, Name: "Dishang", birth: new Date("2003-07-15"), Age: 20 },
+        // { id: 2, Name: "Hardik", birth: new Date("2002-03-22"), Age: 21 },
+        // { id: 3, Name: "Mayur", birth: new Date("2001-02-01"), Age: 22 },
+        // { id: 4, Name: "Ajay", birth: new Date("1991-07-19"), Age: 24 }]
+
+        // function submit() {
+        //     console.log(obj)
+        // }
+        // function asscending() {
+        //     let eve = document.getElementById("select").value
+        //     console.log(obj.sort((a, b) => {
+        //         if (a[eve] < b[eve]) {
+        //             return -1
+        //         }
+        //         if (a[eve] > b[eve]) {
+        //             return 1
+        //         }
+        //         return 0
+        //     }))
+        // }
+        // function desending() {
+        //     let eve = document.getElementById("select").value
+        //     console.log(obj.sort((a, b) => {
+        //         if (a[eve] > b[eve]) {
+        //             return -1
+        //         }
+        //         if (a[eve] < b[eve]) {
+        //             return 1
+        //         }
+        //         return 0
+        //     }))
+        // }
+
+
+
+
+        //9. check Odd even number from given number
+
+
+        //   let a = 4;
+        //   if(a % 2 ){
+        //       console.log(`${a} is odd number`)
+        //   }else{
+        //       console.log(`${a} is even number`)
+        //   }
+
+
+        //10. check string first character is in uppercase or not
+
+
+        // let ab = "Dishang";
+        // if (ab[0].toLowerCase() != ab[0]) {
+        //     console.log(true)
+        // } else {
+        //     console.log(false)
+        // }
+
+
+        //11. find out month name, weekday name of given datetime
+
+
+        // const daa = new Date("2023-02-09");
+        // let days = {
+        //     0: "Sunday", 1: "Monday", 2: "Tuesday",
+        //     3: "Wednesday", 4: "Thusday", 5: "Friday",
+        //     6: "Saturday"
+        // }
+        // let mont = {
+        //     0: "january", 1: "February", 2: "March",
+        //     3: "April", 4: "May", 5: "June",
+        //     6: "July", 7: "August", 8: "September",
+        //     9: "october", 10: "November", 11: "December"
+        // }
+        // let d = daa.getDay()
+        // let h = daa.getMonth()
+        // console.log(days[d], mont[h])
+
+
+        //12. find out previous and next date of given date
+
+        // const a = new Date("2023-01-12")
+        //   let b = (a.getDate()) - 1;
+        //   let c = a.toLocaleString(a.setDate(b))
+        //    console.log("previous",c)
+        // const d = new Date("2023-01-12")
+        //  let e = (d.getDate()) + 1;
+        //  let f = d.toLocaleString(d.setDate(e))
+        //    console.log("Next",f)
+
+
+        //13.find out previous and next month of given date
+
+        // const a = new Date("2023-12-12")
+        // let b = (a.getMonth()) - 1;
+        // let c = a.toLocaleString(a.setMonth(b))
+
+        // console.log(c)
+
+        // const d = new Date("2023-01-12")
+        // let e = (d.getMonth())+1;
+        // let f = d.toLocaleString(d.setMonth(e))
+
+        // console.log(f)
+
+
+        // 14. find out first and last date of month of given date
+
+
+        // const a = new Date("2023-01-21")
+        // console.log(new Date(a.getFullYear(), a.getMonth(), 1).toLocaleDateString())
+        // console.log(new Date(a.getFullYear(), a.getMonth() + 1, 0).toLocaleDateString())
+
+
+
+        //15.find out first and last date of previous and next months of given date
+
+        // const a = new Date("2023-02-21")
+
+        //  console.log("Previous Start"+ ":"+ new Date(a.getFullYear(),a.getMonth()-1,1).toLocaleDateString())
+
+        //  console.log("Previous End"+ ":"+ new Date(a.getFullYear(),a.getMonth(),0).toLocaleDateString())
+
+        //  console.log("Upcoming Start"+ ":"+ new Date(a.getFullYear(),a.getMonth()+1,1).toLocaleDateString())
+
+        //  console.log("Upcoming End"+ ":"+ new Date(a.getFullYear(),a.getMonth()+2,0).toLocaleDateString())
+
+
+
+        //16.how many days between two dates, and also gives date list array
+
+
+        // let arr = []
+        // function dat(start, end) {
+        //     const da = new Date(start)
+        //     const da1 = new Date(end)
+        //     do {
+        //         arr.push(da.toLocaleDateString())
+        //         da.setDate(da.getDate() + 1)
+        //     }
+        //     while (da < da1)
+        // }
+        // dat("2023-01-01", "2023-02-13")
+        // console.log(arr)
+        // console.log(arr.length)
+
+
+
+
+        //17.calculate age of given date
+
+        //     let age = new Date("2003-03-24")
+        //     let current  = new Date()
+        //     let ye = current.getFullYear()
+
+        //    console.log(Math.abs(age.getFullYear()-ye))
+
+
+
+        //18.generate random number in given range
+
+        // function Random(number) {
+        //     const num = Math.round(Math.random() * number)
+
+        //     document.getElementById("demo").innerHTML = num
+        // }
+
+
+        //19. make number format
+
+        //    let num = 100000;
+        //    console.log(num.toLocaleString())
+
+
+        //20.Convert number to string
+
+        //let h = 15;
+        //console.log(typeof h.toString())
+
+
+        //21 .Pagination on array object
+
+        // let pag = [{ "id": 1, "Name": "h1" }, { "id": 2, "Name": "h2" }, { "id": 3, "Name": "h3" }, { "id": 4, "Name": "h4" }, { "id": 5, "Name": "h5" },
+        // { "id": 6, "Name": "h6" }, { "id": 7, "Name": "h7" }, { "id": 8, "Name": "h8" }, { "id": 9, "Name": "h9" }, { "id": 10, "Name": "10" },
+        // { "id": 11, "Name": "h11" }, { "id": 12, "Name": "h12" }, { "id": 13, "Name": "h13" }, { "id": 14, "Name": "h14" }, { "id": 15, "Name": "h15" },
+        // { "id": 16, "Name": "h16" }, { "id": 17, "Name": "h17" }, { "id": 18, "Name": "h18" }, { "id": 19, "Name": "h19" }, { "id": 20, "Name": "h20" }
+        // ]
+
+        // function pagi() {
+        //     let pageSize = document.getElementById("siz").value
+        //     let pageNumber = document.getElementById("page").value
+        //     let totalPage = Math.ceil(pag.length / pageSize)
+        //     document.getElementById("toa").innerHTML = "    Total Pages :- " + totalPage
+        //     console.log(pag.slice(pageSize * (pageNumber - 1), pageNumber * pageSize))
+        // }
+
+
+        //22. Match ID and apply value in another array
+
+        // const arr = [{ "id": 1, "Name": "Hardik", "Age": 21 }, { "id": 2, "Name": "Dishang", "Age": 21 }]
+        // const arr1 = [{ "id": 1, "Name": "Hardik", "Occupasion": "Developer" }, { "id": 2, "Name": "Dishang", "Occupasion": "Developer" }]
+        // arr.map((value) => {
+        //     arr1.forEach((val) => {
+        //         if (val.id == value.id) {
+        //             value.Occupasion = val.Occupasion
+        //         }
+        //     })
+        //     return value
+        // })
+        // console.log(arr)
+
+
+
+
+        //23.Filter array of objects by age
+
+
+        //   let arr = [{
+        //              "id": 1,
+        //             "name": "dishang",
+        //             "Age": 52,
+        //         },
+        //         {
+        //             "id": 2,
+        //             "name": "Hardik",
+        //             "Age": 21,
+        //         },
+        //         {
+        //             "id": 3,
+        //             "name": "Vivek",
+        //             "Age": 38,
+        //         },
+        //         {
+        //             "id": 4,
+        //             "name": "Yash",
+        //             "Age": 10,
+        //         }]
+
+
+        // let belowage = arr.filter((value)=>{return value.Age < 18 })
+        // let above = arr.filter((value)=>{return value.Age > 18 })
+        // console.log(above)
+
+
+
+
+        //24. Check if array contains value if not then push it
+
+        //    let arrr = [{"id": 1,"Name":"hardik"},{"id": 2,"Name":"dishang"}, {"id": 3,"Name":"vivek"}, {"id": 4,"Name":"raj"}]
+        //       let na = "raj"
+        //      let h =arrr.find((value)=>{
+        //                return value.Name == na
+        //       })
+        //         if(h == undefined){
+        //             arrr.push({id:arrr.length+1,Name : na})
+        //                  console.log(arrr)
+        //         }else{
+        //                 console.log("Record is  Existing Record id  :" +" "+ h.id)
+        //         }
+
+
+
+
+        //25 Match parent id and id and make tree array
+
+
+        //     let arr = [{
+        //         "id": 1,
+        //         "name": "dishang",
+        //         "parent_id": 0,
+        //     },
+        //     {
+        //         "id": 2,
+        //         "name": "Hardik",
+        //         "parent_id": 0,
+        //     },
+        //     {
+        //         "id": 3,
+        //         "name": "Vivek",
+        //         "parent_id": 2,
+        //     },
+        //     {
+        //         "id": 4,
+        //         "name": "Yash",
+        //         "parent_id": 3,
+        //     }]
+
+
+        //    let ar =  arr.map((value) => {
+        //         arr.forEach((val) => {
+        //             if (value.id == val.parent_id) {
+        //                 value.child_detail = val
+
+        //             }
+        //         })
+        //         return value
+        //     })
+        //     console.log(ar)
+
+
+
+
+        //26.Match with multiple array and merge it by id and tree
+
+
+        // const names = [{ "id": 1, "Name": "hardik" }, { "id": 2, "Name": "Dishang" }]
+        // const adress = [{ "id": 1, "Adress": "surat", "countryid": "IND" }, { "id": 2, "Adress": "sydney", "countryid": "AUS" }]
+        // const countrys = [{ "IND": "india" }, { "AUS": "australia" }]
+
+        // let adreescountry = adress.map((value) => {
+        //     for (let item of countrys) {
+        //         let countryitem = Object.entries(item)  
+        //         if (value.countryid === countryitem[0][0]) {
+        //             value.countryid = countryitem[0][1]
+        //         }
+        //     }
+        //     return value
+        // })
+        // names.map((nameValue) => {
+        //     for (let item of adreescountry) {
+        //         if (nameValue.id === item.id) {
+        //             nameValue.adreess = item
+        //         }
+        //     }
+        //     return nameValue
+        // })
+        // console.log(names)
+
+
+
+        //27.Group by same field
+
+        // const records = [
+        //     { "id": 1, "Name": "h1", "countryid": "IND" }, { "id": 2, "Name": "h2", "countryid": "AUS" },
+        //     { "id": 3, "Name": "h3", "countryid": "IND" }, { "id": 4, "Name": "h4", "countryid": "AUS" },
+        //     { "id": 5, "Name": "h5", "countryid": "IND" }, { "id": 6, "Name": "h6", "countryid": "AUS" },
+        //     { "id": 7, "Name": "h7", "countryid": "IND" }, { "id": 8, "Name": "h8", "countryid": "AUS" },
+        //     { "id": 9, "Name": "h9", "countryid": "IND" }, { "id": 10, "Name": "h10", "countryid": "AUS" }
+        // ]
+        // let newRecords = records.reduce((current, next) => {
+        //     current[next.countryid] = current[next.countryid] || []
+        //     current[next.countryid].push(next)
+        //     return current
+        // }, {})
+        // console.log(newRecords)
+
+
+        // 28. Count word length and word number
+
+        // let nam = "dishang hhhh j mm tt"
+        // let a =nam.split(" ")
+
+        //console.log(a.length)
+        //console.log(nam.length)
+
+
+
+        // Note   :-  Task no. 29 to 45 is in index.js file
+
+
+        //46. make counter
+
+        // function countPlus() {
+        //     let miniValue = parseInt(document.getElementById('mini').value)
+        //     let maxiValue = parseInt(document.getElementById('maxi').value)
+        //     let checkValue = parseInt(document.getElementById('display').value)
+        //     if (checkValue < miniValue) {
+        //         document.getElementById('display').value = miniValue
+        //     } else if (checkValue < maxiValue) {
+        //         document.getElementById('display').value++
+        //         console.log("first")
+        //     }
+        // }
+        // function countMinus() {
+        //     let miniValue = parseInt(document.getElementById('mini').value)
+        //     let checkValue = parseInt(document.getElementById('display').value)
+        //     if (checkValue > miniValue) {
+        //         document.getElementById('display').value--
+        //     }
+        // }
+
+
+        //47. make stop watch with start and stop button
+
+        // let watch;
+        // function watchStart() {
+        //     let s = 1
+        //     let m = 1
+        //     let h = 1
+        //     watch = setInterval(() => {
+        //         document.getElementById('second').innerHTML = s++
+
+        //         if (s >= 60) {
+        //             s = 0
+        //             document.getElementById('minitue').innerHTML = m++
+        //         } else if (m >= 60) {
+        //             m = 0
+        //             document.getElementById('hour').innerHTML = h++
+        //         }
+        //     }, 1000);
+        // }
+        // function watchStop() {
+        //     clearInterval(watch)
+        // }
+
+
+        //48.  Create a  simple calculator that do for an arithmetic expression and returns its result.
+
+
+        // let newItem = "";
+        // function clearDisplay() {
+        //     location.reload()
+        // }
+        // function calculation(value) {
+        //     document.getElementById("display").value = newItem += value
+        // }
+        // function total() {
+        //     document.getElementById("display").value = eval(newItem)
+        // }
+        // function totalSecond() {
+        //     document.getElementById("display").value = newItem / 100
+        // }
+        // document.getElementById('demo').value
+
+
+
+        //Manualy
+
+
+        // let previousValue = "";
+        // function clearDisplay() {
+        //     location.reload()
+        // }
+        // function handleNumber(NumValue) {
+        //     document.getElementById('display').value = previousValue += NumValue;
+        // }
+        // function Addition(plusValue) {
+        //     previousValue = document.getElementById('display').value
+        //     previousValue += plusValue
+        //     document.getElementById('display').value = ""
+        //     if (previousValue.length > 0) {
+        //         let splitAll = previousValue.split("+")
+        //         if (splitAll.length > 2) {
+        //             if (splitAll[splitAll.length - 1] == "") {
+        //                 delete splitAll[splitAll.length - 1]
+        //             }
+        //             previousValue = splitAll.reduce((total, value) => { return parseInt(total) + parseInt(value) })
+        //         }
+        //         document.getElementById('display').value = previousValue
+        //     }
+        // }
+        // function Subtraction(minusValue) {
+        //     previousValue = document.getElementById('display').value
+        //     previousValue += minusValue
+        //     document.getElementById('display').value = ""
+        //     if (previousValue.length > 0) {
+        //         let splitAll = previousValue.split("-")
+        //         if (splitAll.length > 2) {
+        //             if (splitAll[splitAll.length - 1] == "") {
+        //                 delete splitAll[splitAll.length - 1]
+        //             }
+        //             previousValue = splitAll.reduce((total, value) => { return parseInt(total) - parseInt(value) })
+        //         }
+        //         document.getElementById('display').value = previousValue
+        //     }
+        // }
+        // function Multiplication(multiplicationValue) {
+        //     previousValue = document.getElementById('display').value
+        //     previousValue += multiplicationValue
+        //     document.getElementById('display').value = ""
+        //     if (previousValue.length > 0) {
+        //         let splitAll = previousValue.split("*")
+        //         if (splitAll.length > 2) {
+        //             if (splitAll[splitAll.length - 1] == "") {
+        //                 delete splitAll[splitAll.length - 1]
+        //             }
+        //             previousValue = splitAll.reduce((total, value) => { return parseInt(total) * parseInt(value) })
+        //         }
+        //         document.getElementById('display').value = previousValue
+        //     }
+        // }
+        // function Division(DivisionValue) {
+        //     previousValue = document.getElementById('display').value
+        //     previousValue += DivisionValue
+        //     document.getElementById('display').value = ""
+        //     if (previousValue.length > 0) {
+        //         let splitAll = previousValue.split("/")
+        //         if (splitAll.length > 2) {
+        //             if (splitAll[splitAll.length - 1] == "") {
+        //                 delete splitAll[splitAll.length - 1]
+        //             }
+        //             previousValue = splitAll.reduce((total, value) => { return parseInt(total) / parseInt(value) })
+        //         }
+        //         document.getElementById('display').value = previousValue
+        //     }
+        // }
+        // function total() {
+        //      document.getElementById("display").value = eval(previousValue)
+        // }
+        // function totalSecond() {
+        //     document.getElementById("display").value = previousValue / 100
+        // }
+
+
+        //49.(This task is in Emploees.js file)
+
+
+        //50. make number table
+
+        // let numberTable = 2
+        // for(i=1;i<=10;i++){
+        // let result = i * numberTable
+        // document.write(`${numberTable} * ${i} = ${result} <br>`)
+        // }
+
+
+        //51. check valid email id
+
+        // function validEmail() {
+        //     let item = document.getElementById('email').value
+        //     let reg = new RegExp(/^([a-z]{3,20})@([a-z]{3,10}.[a-z]{2,3}$)/)
+        //     if (reg.test(item)) {
+        //         alert("Your email is valid.")
+        //     } else {
+        //         alert("please enter valid email adress")
+        //     }
+        // }
+     
+
+
+    </script>
+
+</body>
+
+</html>
